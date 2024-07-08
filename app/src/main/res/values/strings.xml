@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name" translatable="false">GPT3 Chat</string>
+    <string name="google_developer_id" translatable="false">AndroMou Ltd</string>
+
+    <string name="AdmobAppId" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="AdmobBanner" translatable="false">ca-app-pub-3940256099942544/9214589741</string>
+    <string name="AdmobInterstitial" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="AdmobRewardID" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
+
+
+    <string name="error_occ">Error</string>
+
+    <string name="RateAppTitle">Like this app?</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="setting_label_share">Share It</string>
+    <string name="more_apps">More Apps</string>
+    <string name="letsstareted">Let\'s started</string>
+
+    <string name="write_here">Write here</string>
+
+
+    <string name="ask_chatgpt_3">Chat with ChatGPT-3</string>
+    <string name="title_activity_new_main" translatable="false">NewMainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+
+
+</resources>
