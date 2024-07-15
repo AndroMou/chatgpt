@@ -3,6 +3,7 @@ package com.andromou.chatgpt.androidgpt.utils;
 import static android.content.Context.CLIPBOARD_SERVICE;
 
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -134,6 +135,12 @@ public class Util {
         ClipData clipData = ClipData.newPlainText("text", mText);
         clipboardManager.setPrimaryClip(clipData);
         showToast(context, "Text is Copied");
+    }
+
+    public static void startAppCompatActivity(Context context, Class mClass){
+        Intent intent = new Intent(context, mClass);
+        context.startActivity(intent);
+      //  ((Activity)context).finish();
     }
 
 

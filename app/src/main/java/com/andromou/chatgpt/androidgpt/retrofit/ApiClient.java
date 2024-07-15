@@ -7,6 +7,7 @@ public class ApiClient {
     private static final String BASE_URL = "https://api.openai.com/v1/";
 
     private static Retrofit retrofit = null;
+    private static ChatGptApi chatGptApi = null;
 
     public static Retrofit getClient() {
         if (retrofit == null) {
@@ -17,4 +18,16 @@ public class ApiClient {
         }
         return retrofit;
     }
+
+    public static ChatGptApi getChatGptApi() {
+        if (chatGptApi == null) {
+            chatGptApi = getClient().create(ChatGptApi.class);
+        }
+        return chatGptApi;
+    }
+
+    public static void setClient(ChatGptApi customChatGptApi) {
+        chatGptApi = customChatGptApi;
+    }
 }
+

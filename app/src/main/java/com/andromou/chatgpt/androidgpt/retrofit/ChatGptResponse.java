@@ -5,11 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class ChatGptResponse {
     @SerializedName("choices")
-    private final ChatGptChoice[] choices;
-
-    public ChatGptResponse(ChatGptChoice[] choices) {
-        this.choices = choices;
-    }
+    private ChatGptChoice[] choices;
 
     public String getResult() {
         if (choices != null && choices.length > 0) {
@@ -18,17 +14,22 @@ public class ChatGptResponse {
         return null;
     }
 
+    public void setResult(String s) {
+        if (choices != null && choices.length > 0) {
+            choices[0].setText(s);
+        }
+    }
+
     private static class ChatGptChoice {
         @SerializedName("text")
-        private final String text;
-
-        private ChatGptChoice(String text) {
-            this.text = text;
-        }
+        private String text;
 
         public String getText() {
             return text;
         }
+
+        public void setText(String text) {
+            this.text = text;
+        }
     }
 }
-
