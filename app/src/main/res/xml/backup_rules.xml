@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<fullBackupContent>
-    <include domain="sharedprefs" path="app.xml" />
-    <include domain="file" path="logs/" />
-    <!-- Add more include tags as needed -->
-</fullBackupContent>
