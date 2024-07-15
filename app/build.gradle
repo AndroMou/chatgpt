@@ -1,21 +1,29 @@
 plugins {
     id 'com.android.application'
-    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+
 }
 
 android {
-    namespace 'com.andromou.chatgpt.androidgpt'
-    compileSdk 34
+    namespace 'com.andromou.chatgpt'
+    compileSdk 33
 
     defaultConfig {
-        applicationId "com.andromou.chatgpt.androidgpt"
-        minSdk 23
-        targetSdk 34
+        applicationId "com.andromou.chatgpt"
+        minSdk 24
+        targetSdk 33
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+    buildFeatures {
+        viewBinding true
     }
 
     buildTypes {
@@ -28,35 +36,26 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    buildFeatures {
-        viewBinding true
+
+
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
 
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.0'
     implementation 'androidx.appcompat:appcompat:1.6.0'
-    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.navigation:navigation-fragment:2.5.3'
-    implementation 'androidx.navigation:navigation-ui:2.5.3'
-    implementation 'androidx.cardview:cardview:1.0.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 
-    implementation 'com.google.android.gms:play-services-ads:21.5.0'
-
-    implementation 'com.intuit.sdp:sdp-android:1.1.1'
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation "com.squareup.okhttp3:okhttp:4.12.0"
 
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.14'
-
-    testImplementation 'androidx.test:core:1.6.1'
-    testImplementation 'org.mockito:mockito-core:3.11.2'
-    testImplementation 'org.mockito:mockito-inline:3.11.2'
-
+    implementation 'com.intuit.sdp:sdp-android:1.1.1'
 }
